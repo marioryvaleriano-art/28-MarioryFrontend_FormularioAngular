@@ -1,0 +1,45 @@
+<section class="hero-section">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <p class="premium-tag">
+        <span class="red-text">TU MUNDO.</span> TU PESADILLA.
+      </p>
+      <h1 class="main-title">
+        VIVE EL TERROR.<br>
+        <span class="red-highlight">JUEGA SIN MIEDO.</span>
+      </h1>
+      
+      <a routerLink="/explorar" class="btn-outline-terror">
+        EXPLORAR JUEGOS <span class="arrow">›</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="main-gradient-bg">
+  <section class="trending-section">
+    <div class="trending-container">
+      <div class="trending-header">
+        <p class="subtitle">LO MÁS VISTO</p>
+        <h2 class="title-terror">LOS MÁS BUSCADOS</h2>
+        <div class="red-line"></div>
+      </div>
+
+      <div class="trending-grid">
+        <div class="game-card" *ngFor="let juego of juegos">
+          <div class="tag-card" [ngClass]="juego.clase">{{juego.tag}}</div>
+          <div class="image-container">
+            <img [src]="juego.img" [alt]="juego.title">
+          </div>
+          <div class="game-info">
+            <h3>{{juego.title}}</h3>
+          </div>
+          <button class="btn-ver-mas">VER MÁS</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<app-benefits></app-benefits>
+<app-contact></app-contact>

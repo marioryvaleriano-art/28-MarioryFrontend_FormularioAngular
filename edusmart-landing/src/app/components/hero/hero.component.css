@@ -1,0 +1,177 @@
+/* --- 1. FUENTES Y VARIABLES --- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap');
+
+/* --- 2. SECCIÓN PORTADA (HERO) --- */
+.hero-section {
+    height: 100vh;
+    background: url('/images/Gemini_Generated_Image_1u5sch1u5sch1u5s.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.2) 60%, transparent 100%);
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+}
+
+.main-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 10vw, 8rem); /* Texto gigante y fino */
+    line-height: 0.85;
+    color: white;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.red-highlight { color: #ce0000; }
+
+.btn-outline-terror {
+    display: inline-block;
+    padding: 15px 45px;
+    border: 2px solid #ce0000;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+.btn-outline-terror:hover {
+    background: #ce0000;
+    box-shadow: 0 0 25px rgba(206, 0, 0, 0.6);
+    transform: translateY(-3px);
+}
+
+/* --- 3. CONTENEDOR DEGRADADO (FONDO GLOBAL) --- */
+.main-gradient-bg {
+    /* Degradado de negro a rojo profundo solicitado */
+    background: linear-gradient(180deg, #000000 0%, #2a0101 40%, #450202 70%, #000000 100%);
+    padding-bottom: 80px;
+}
+
+/* --- 4. SECCIÓN CATÁLOGO (EL QUE SE HABÍA PERDIDO) --- */
+.trending-section {
+    padding: 100px 0;
+}
+
+.trending-container {
+    width: 95%; /* Ocupa el ancho solicitado */
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+.title-terror {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.red-line {
+    width: 120px;
+    height: 6px;
+    background: #ce0000;
+    margin-bottom: 50px;
+}
+
+/* Grilla de 4 columnas para los juegos */
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.game-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #222;
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.game-card:hover {
+    border-color: #ce0000;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.image-container {
+    height: 450px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.game-card:hover .image-container img {
+    transform: scale(1.1);
+}
+
+/* Etiquetas de los juegos (Destacado, Nuevo, etc) */
+.tag-card {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+    z-index: 5;
+    text-transform: uppercase;
+}
+
+.destacado { background: #ce0000; }
+.nuevo { background: #008f39; }
+.recomendado { background: #005bc4; }
+.clasico { background: #555555; }
+
+.game-info {
+    padding: 20px;
+    text-align: center;
+    background: #000;
+}
+
+.game-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.btn-ver-mas {
+    width: 100%;
+    padding: 15px;
+    background: #111;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-top: 1px solid #222;
+    transition: 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background: white;
+    color: black;
+}
+
+/* --- 5. RESPONSIVE (Para celulares) --- */
+@media (max-width: 1200px) {
+    .trending-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .trending-grid { grid-template-columns: 1fr; }
+    .main-title { font-size: 3.5rem; }
+}

@@ -1,0 +1,114 @@
+/* --- FONDO Y SECCIÓN --- */
+.contact-section {
+    position: relative;
+    /* Usamos el mismo degradado que las otras secciones para coherencia */
+    background: linear-gradient(180deg, #000000 0%, #1a0101 50%, #000000 100%);
+    padding: 120px 0;
+    color: white;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* --- CABECERA --- */
+.red-subtitle {
+    color: #ce0000;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.title-terror {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.red-line-center {
+    width: 80px;
+    height: 4px;
+    background: #ce0000;
+    margin: 20px auto;
+}
+
+.contact-description {
+    color: #aaa;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+/* --- TARJETA DEL FORMULARIO --- */
+.contact-card {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid #333;
+    padding: 50px;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-group {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+.contact-form input {
+    background: #000;
+    border: 1px solid #444;
+    padding: 15px;
+    color: white;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.contact-form input:focus {
+    outline: none;
+    border-color: #ce0000;
+    box-shadow: 0 0 10px rgba(206, 0, 0, 0.2);
+}
+
+/* --- BOTÓN DE REGISTRO --- */
+.btn-rojo-form {
+    background: #ce0000;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.btn-rojo-form:hover {
+    background: #ff0000;
+    box-shadow: 0 0 30px rgba(206, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.btn-rojo-form .arrow {
+    margin-left: 10px;
+}

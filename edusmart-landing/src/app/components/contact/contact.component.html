@@ -1,0 +1,34 @@
+<section id="contacto" class="contact-section">
+  <div class="contact-overlay">
+    <div class="contact-container">
+      
+      <div class="contact-header">
+        <p class="red-subtitle">FORMULARIO DE RECLUTAMIENTO</p>
+        <h2 class="title-terror">ÚNETE AL ESCUADRÓN</h2>
+        <div class="red-line-center"></div>
+        <p class="contact-description">
+          Regístrate para recibir alertas de nuevos lanzamientos, betas cerradas y contenido exclusivo directamente en tu zona de seguridad.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <form (ngSubmit)="enviarMensaje()" class="contact-form">
+          <div class="input-group">
+            <label>NOMBRE DE USUARIO</label>
+            <input type="text" placeholder="Ej: SurvivalHunter_99" required>
+          </div>
+
+          <div class="input-group">
+            <label>CORREO ELECTRÓNICO</label>
+            <input type="email" placeholder="tu-email@terror.com" required>
+          </div>
+
+          <button type="submit" class="btn-rojo-form">
+            CONFIRMAR REGISTRO <span class="arrow">›</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

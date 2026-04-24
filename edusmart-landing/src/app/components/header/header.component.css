@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: black;
+  border-bottom: 3px solid #ce0000;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white; /* Vuelven a ser blancos por defecto */
+  text-decoration: none; /* Sin subrayados raros */
+  font-weight: bold;
+  font-size: 0.9rem; /* Tamaño estándar original */
+  transition: 0.3s;
+}
+
+/* SOLO se pone rojo el que está activo */
+.active-link {
+  color: #ce0000 !important;
+}
+
+.red-text {
+  color: #ce0000;
+}

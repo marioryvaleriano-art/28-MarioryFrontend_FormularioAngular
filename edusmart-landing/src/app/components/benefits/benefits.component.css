@@ -1,0 +1,64 @@
+.benefits-bg {
+    background: linear-gradient(180deg, #000000 0%, #2a0101 50%, #000000 100%);
+    padding: 100px 0;
+}
+
+.experience-container {
+    width: 95%;
+    max-width: 1700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.premium-label {
+    color: #ce0000;
+    font-size: 0.83rem; /* +3% aprox */
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.title-terror {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.12rem; /* +3% aprox */
+    color: white;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ce0000;
+    transition: 0.3s;
+}
+
+.benefit-icon { 
+    font-size: 1.55rem; /* +3% aprox */
+}
+
+.benefit-content h4 {
+    color: white;
+    margin: 0 0 5px 0;
+    font-size: 1.25rem; /* +3% aprox */
+    letter-spacing: 1px;
+}
+
+.benefit-content p {
+    color: #aaa;
+    margin: 0;
+    font-size: 0.93rem; /* +3% aprox de 0.9rem */
+    line-height: 1.5;
+}
+
+.freddy-img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 50px rgba(206, 0, 0, 0.3);
+}

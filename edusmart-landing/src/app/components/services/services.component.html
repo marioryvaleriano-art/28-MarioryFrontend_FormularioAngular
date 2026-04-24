@@ -1,0 +1,11 @@
+<section class="services">
+  <h2>Nuestros Programas</h2>
+  <div class="grid">
+    <div class="card" *ngFor="let plan of planes">
+      <div class="icon">{{ plan.img }}</div>
+      <h3>{{ plan.titulo }}</h3>
+      <p>{{ plan.desc }}</p>
+      <p class="price">Desde S/ {{ plan.precio }}</p>
+    </div>
+  </div>
+</section>

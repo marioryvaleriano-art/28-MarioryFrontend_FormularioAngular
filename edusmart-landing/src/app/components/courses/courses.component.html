@@ -1,0 +1,67 @@
+<div class="catalog-main-container">
+
+  <div *ngIf="!mostrarDetalle">
+    <div class="search-section">
+      <div class="search-bar">
+        <input type="text" [(ngModel)]="searchText" placeholder="Buscar en el catálogo...">
+        <span class="search-icon">🔍</span>
+      </div>
+    </div>
+
+    <div class="centered-content">
+      <section class="catalog-row" *ngFor="let row of [
+        {titulo: 'TENDENCIAS AHORA', data: tendencias},
+        {titulo: 'CLÁSICOS DEL TERROR', data: clasicos},
+        {titulo: 'SAGA RESIDENT EVIL', data: residentEvilSaga}
+      ]">
+        <div class="row-header">
+          <h2 class="row-title">{{row.titulo}}</h2>
+          <span class="view-more-text">Ver todos ></span>
+        </div>
+
+        <div class="cards-grid">
+          <div class="game-card" *ngFor="let juego of row.data" (click)="verDetalle(juego)">
+            <div class="image-container">
+              <span class="badge" *ngIf="juego.label" [ngClass]="juego.label.toLowerCase()">
+                {{juego.label}}
+              </span>
+              <img [src]="juego.img" [alt]="juego.title">
+            </div>
+            <div class="card-footer">
+              <h3 class="game-name">{{juego.title}}</h3>
+              <span class="play-link">VER MÁS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="netflix-detail" *ngIf="mostrarDetalle && juegoSeleccionado">
+    <header class="hero-banner" [style.backgroundImage]="'linear-gradient(to right, #000 20%, transparent), url(' + juegoSeleccionado.img + ')'">
+      <div class="hero-info">
+        <h1 class="hero-title">{{juegoSeleccionado.title}}</h1>
+        <p class="hero-desc">{{juegoSeleccionado.descripcion}}</p>
+        <div class="hero-actions">
+          <button class="btn-play">▶ JUGAR</button>
+          <button class="btn-close" (click)="cerrarDetalle()">✕ VOLVER</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="more-content">
+      <h2 class="row-title">JUEGOS QUE PODRÍAN GUSTARTE</h2>
+      <div class="cards-grid">
+        <div class="game-card" *ngFor="let j of clasicos">
+          <div class="image-container">
+            <img [src]="j.img" [alt]="j.title">
+          </div>
+          <div class="card-footer">
+            <h3 class="game-name">{{j.title}}</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</div>

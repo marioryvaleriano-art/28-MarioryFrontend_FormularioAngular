@@ -1,0 +1,66 @@
+/* 1. IMPORTACIÓN DE FUENTES */
+/* Bebas Neue para títulos y Inter para textos normales */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap');
+
+/* 2. RESETEO GLOBAL */
+/* Esto quita los márgenes blancos que vienen por defecto en los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth; /* Hace que al dar clic en el menú, baje suavemente */
+}
+
+body {
+    /* FONDO DEGRADADO GLOBAL: Negro a Rojo profundo solicitado */
+    background: #000000;
+    background: linear-gradient(180deg, #000000 0%, #1a0101 50%, #000000 100%);
+    
+    color: white;
+    font-family: 'Inter', sans-serif; /* Fuente por defecto para toda la web */
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita que la página se mueva hacia los lados */
+}
+
+/* 3. CLASES GLOBALES REUTILIZABLES */
+/* Estas clases las puedes usar en cualquier componente */
+
+.title-terror {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.red-text {
+    color: #ce0000;
+}
+
+/* Estilo para los contenedores principales (95% de ancho como pediste) */
+.main-container {
+    width: 95%;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+/* 4. SCROLLBAR PERSONALIZADO (Toque pro) */
+/* Esto hace que la barra de desplazamiento lateral se vea roja y negra */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ce0000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;
+}
