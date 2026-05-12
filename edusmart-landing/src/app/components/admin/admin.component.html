@@ -1,0 +1,67 @@
+<div class="panel">
+
+  <h1 class="titulo">💀 TERROR GAMING PANEL</h1>
+
+  <div class="card-form">
+
+    <h2>Registrar Juego</h2>
+
+    <form #form="ngForm">
+
+      <input name="titulo"
+             [(ngModel)]="juegoActual.titulo"
+             placeholder="Título">
+
+      <input name="categoria"
+             [(ngModel)]="juegoActual.categoria"
+             placeholder="Categoría">
+
+      <input name="imagen"
+             [(ngModel)]="juegoActual.imagen"
+             placeholder="Imagen URL">
+
+      <textarea name="descripcion"
+                [(ngModel)]="juegoActual.descripcion"
+                placeholder="Descripción"></textarea>
+
+      <button type="button" (click)="guardar(form)">
+        GUARDAR
+      </button>
+
+    </form>
+
+  </div>
+
+  <div class="card-table">
+
+    <h2>Juegos Registrados</h2>
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>TÍTULO</th>
+          <th>CATEGORÍA</th>
+          <th>ACCIONES</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let j of listaJuegos">
+
+          <td>{{j.titulo}}</td>
+          <td>{{j.categoria}}</td>
+
+          <td>
+            <button (click)="prepararEdicion(j)">✏️</button>
+            <button (click)="eliminar(j.id)">🗑</button>
+          </td>
+
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>

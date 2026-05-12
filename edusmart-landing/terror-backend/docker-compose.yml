@@ -1,0 +1,33 @@
+services:
+  # Base de Datos
+  db-gaming:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql_server_gaming
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Password123!
+    networks:
+      - gaming-net
+
+  # Tu Backend
+  backend:
+    build: . # <--- CAMBIA ESTO (Si el archivo está dentro de terror-backend)
+    container_name: api_gaming
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_SERVER=db-gaming
+      - DB_PORT=1433
+      - DB_USER=sa
+      - DB_PASSWORD=Password123!
+      - DB_NAME=TerrorGamingDB
+    depends_on:
+      - db-gaming
+    networks:
+      - gaming-net
+
+networks:
+  gaming-net:
+    driver: bridge

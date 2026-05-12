@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #8b0000; /* rojo sangre */
+}
+
+.panel {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TITULO PRINCIPAL */
+.titulo {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* CARD FORM */
+.card-form {
+  background: #1a1a1a;
+  color: white;
+  padding: 20px;
+  width: 700px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card-form h2 {
+  margin-bottom: 15px;
+}
+
+/* FILA INPUTS */
+.fila {
+  display: flex;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+textarea {
+  height: 80px;
+}
+
+/* BOTÓN */
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #cc0000;
+}
+
+/* TABLA */
+.card-table {
+  background: #1a1a1a;
+  color: white;
+  padding: 20px;
+  width: 700px;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  color: red;
+  text-transform: uppercase;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+/* BOTONES ACCIONES */
+.acciones button {
+  width: 40px;
+  margin: 0 3px;
+  padding: 5px;
+}

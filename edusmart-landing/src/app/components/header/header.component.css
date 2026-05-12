@@ -37,3 +37,18 @@
 .red-text {
   color: #ce0000;
 }
+.admin-btn {
+    color: #ff4d4d !important; /* Rojo para que resalte */
+    font-weight: bold;
+    border: 1px solid #ff4d4d;
+    padding: 5px 12px;
+    border-radius: 4px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.admin-btn:hover {
+    background: #ff4d4d;
+    color: white !important;
+    box-shadow: 0 0 10px #ff4d4d;
+}
